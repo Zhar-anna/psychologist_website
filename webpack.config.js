@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   // mode: 'development',
@@ -46,8 +47,17 @@ module.exports = {
         use: 'url-loader?limit=10000',
       },
       {
-        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-        use: 'file-loader',
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'assert/resource',
+        // include: './src/images',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            // outputPath: './dist'
+        },
+      },
+        
       },
     ],
   },
@@ -59,5 +69,6 @@ module.exports = {
       filename: 'main.css',
     }),
     new NodePolyfillPlugin(),
+    new CleanWebpackPlugin(),
   ],
 };
