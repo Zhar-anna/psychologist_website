@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  // mode: 'development',
-  mode: 'production',
+  mode: 'development',
+  // mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -14,12 +14,13 @@ module.exports = {
   },
   devServer: {
     open: true,
-    // port: 9000,
+    port: 9000,
     host: 'localhost',
     static: {
       directory: path.join(__dirname, 'dist'),
     },
   },
+
   resolve: {
     fallback: {
       fs: false,
@@ -47,17 +48,12 @@ module.exports = {
         use: 'url-loader?limit=10000',
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: 'assert/resource',
-        // include: './src/images',
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-            // outputPath: './dist'
-        },
+        test: /\.jpg/,
+        type: 'asset/resource', 
       },
-        
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/inline',
       },
     ],
   },

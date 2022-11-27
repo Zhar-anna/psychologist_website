@@ -9,17 +9,20 @@
         <header>
           <button class="lang">RU</button>
           <button class="lang">ENG</button>
-           <section class="cap">
-              <div class="cap_item">+7 (977) 351-34-40</div>
-              <img src={Watsapp.jpg} >
-              <div class="cap_item">Образование</div>
-              <div class="cap_item">Отзывы</div>
-              <div class="cap_item">Услуги</div>
-            <div class="cap_item">Записаться</div>
+           <section class="cap flex">
+              <div class="cap_item fw-600 ff">+7 (977) 351-34-40</div>
+              
+              <div class="cap_item cp fw-600 ff">Образование</div>
+              <div class="cap_item cp fw-600 ff">Отзывы</div>
+              <div class="cap_item cp fw-600 ff">Услуги</div>
+            <div class="cap_item cp fw-600 ff">Записаться</div>
            </section>
+           <img class="watsapp" src='' alt="watsapp_image">
+              <img class="telegram"src='' alt="telegram_image">
         </header>
       <main>
-        <div>Я открыто признаю, что исповедую Ислам.
+        <section class="flex ph_des">
+          <div class="description fw-400 ff flex">Я открыто признаю, что исповедую Ислам.
             И он мне неустанно напоминает, что оценивать и критиковать других - это дело Бога. 
             
             Я всего лишь психолог, и обращаясь ко мне, будьте уверены, 
@@ -27,13 +30,14 @@
             
             Моё дело - психологическое сопровождение людей на их пути.
             А свой путь я выбрала давно, об этом Вы можете подробно почитать в разделе образование.
-        </div>
-        <img src="./src/images/Photo.jpg" alt="Фото">
-        <title>Ольга Колесник (Жарова)</title>
-        <div>Практикующий психолог</div>
+          </div>
+        <img class="photo" src="" alt="Фото">
+        </section>
+        <div class="main ff">Ольга Колесник (Жарова)</div>
+        <div class="title fw-400 ff flex">Практикующий психолог</div>
       </main>
       <section class="education">
-        <div class="section_title">Образование и повышение кваллификации</div>
+        <div class="section_title fw-300 ff flex">Образование и повышение кваллификации</div>
         <div class="ed_sertificat_container">
           <img class="ed_sertificat" src="./src/images/Education/Диплом1.jpg" alt="Диплом1 Колесник Ольга">
           <img class="ed_sertificat" src="./src/images/Education/Диплом2.jpg" alt="Диплом2 Колесник Ольга">
@@ -48,22 +52,22 @@
         </div>
       </section>
       <section class="Reviews">
-        <div class="section_title">Отзывы</div>
+        <div class="section_title fw-300 ff flex">Отзывы</div>
       </section>
       <secton class="prices">
-        <div class="section_title">Варианты консультаций</div>
-        <div class="prices_container">
-          <div class="prices_item" id="square">Индивидуальная психологическая консультация 
+        <div class="section_title fw-300 ff flex">Варианты консультаций</div>
+        <div class="prices_container flex">
+          <div class="prices_item fw-400 ff" id="square">Индивидуальная психологическая консультация 
 
             5000 ₽ / 60 минут
             
             Пакет из 5 индивидуальных консультаций - 22000 ₽</div>
-          <div class="prices_item" id="square">Семейная психологическая консультация
+          <div class="prices_item fw-400 ff" id="square">Семейная психологическая консультация
 
             7000 ₽ / 90 минут
            
            Пакет из 5 семейных консультаций - 32000 ₽</div>
-          <div class="prices_item" id="square">Cовременный формат
+          <div class="prices_item fw-400 ff" id="square">Cовременный формат
 
             Психологическая консультация по переписке - 
             3000 ₽ / 60 минут (время фиксированное)</div>
