@@ -16,10 +16,10 @@ body {
   font-weight: 400;
 }
 .fw-300 {
-    font-weight: 300;
+  font-weight: 300;
 }
 .fw-600 {
-    font-weight: 600;
+  font-weight: 600;
 }
 .flex {
     display: flex;
@@ -32,6 +32,7 @@ body {
     margin: 10px;
 }
 .cap {
+    margin-top: 20px;
     width: 1300px;
     justify-content: space-between;
     margin: 10px;
@@ -49,6 +50,7 @@ line-height: 78px;
 text-align: center;
 color: #FFF6F6;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-top: 70px;
 }
 
 .title {
@@ -57,11 +59,12 @@ font-size: 40px;
 line-height: 49px;
 color: #FFF6F6;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-bottom: 70px;
 }
 
 .description {
     width: 860px;
-height: 334px;
+  height: 334px;
     font-size: 24px;
   line-height: 29px;
   color: #F9E7E6;
@@ -72,4 +75,9 @@ height: 334px;
 
 .ph_des {
     justify-content: space-around;
+    background-color: #003445;
+}
+
+.watsapp {
+    margin-left: 50px;
 }

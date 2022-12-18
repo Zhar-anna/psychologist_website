@@ -9,7 +9,8 @@ const init = () => {
   }
   const i18nextInstance = i18next.createInstance();
   i18nextInstance.init({
-    lang: state.lang,
+    lng: state.lang,
+    debug: true,
     resources: locales,
   });
   const elements = {
@@ -17,10 +18,11 @@ const init = () => {
     telegram: document.querySelector('.telegram'),
     photo: document.querySelector('.photo'),
     sertificats: document.querySelectorAll('.ed_sertificat'),
+    disclamer: document.querySelector('.description'),
   };
   const watched = watch(state, elements, i18nextInstance);
 
-  initView(watched, elements);
+  initView(watched, elements, i18nextInstance);
 };
 
 export default init;
