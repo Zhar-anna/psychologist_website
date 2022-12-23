@@ -1,0 +1,37 @@
+.flex {
+    display: flex;
+}
+.Reviews {
+    justify-content: center;
+}
+.reviews_container {
+    position: relative;
+    height: 400px;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+  justify-content: center;
+}
+.slider_list {
+    overflow: hidden;
+}
+.slider img {
+    pointer-events: none;
+}
+
+.reviews_photo {
+    flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+}
+
+.left_arrow,
+.right_arrow {
+    cursor: pointer;
+    margin: 50px;
+}
