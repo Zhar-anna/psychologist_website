@@ -29,6 +29,8 @@ export default (watchedState, elements, i18nextInstance) => {
     reviews,
     sertificats,
     disclamer,
+    right_button,
+    left_button,
   } = elements;
   watsapp.src = watsapp_image;
   telegram.src = telegram_image;
@@ -68,6 +70,7 @@ export default (watchedState, elements, i18nextInstance) => {
   })
 
   reviews[0].src = reviews1;
+  reviews[0].style.visibility = 'block';
   reviews[1].src = reviews2;
   reviews[2].src = reviews3;
   reviews[3].src = reviews4;
@@ -76,8 +79,29 @@ export default (watchedState, elements, i18nextInstance) => {
   reviews[6].src = reviews7;
   reviews[7].src = reviews8;
   reviews.forEach((review) => {
-    review.style.width = 200 + 'px';
+    review.style.width = 300 + 'px';
     review.style.height = 100 + '%';
   });
+  for (let i = 1; i <= watchedState.reviews.length - 1; i += 1) {
+    reviews[i].style.display= 'none';
+  }
+  right_button.addEventListener('click' , (e) => {
+    e.preventDefault();
+    if (watchedState.uiState.viewedReviewsId < watchedState.reviews.length - 2) {
+      watchedState.uiState.viewedReviewsId += 1;
+    } else {
+      right_button.disabled = true;
+    }
+  });
+
+  left_button.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (watchedState.uiState.viewedReviewsId > 0) {
+      watchedState.uiState.viewedReviewsId -= 1;
+    } else {
+      left_button.disabled = true;
+    }
+  })
+
 };
 

@@ -6,10 +6,11 @@ import initView from './initView.js';
 const init = () => {
   const state = {
     lang: 'ru',
-    diploms: [],
+    diploms: [{id: 0}, {id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}, {id: 6}, {id: 7}],
+    reviews: [{id: 0}, {id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}, {id: 6}, {id: 7}],
     uiState: {
       viewedDiplomaId: [],
-      viewedReviewsId: [],
+      viewedReviewsId: 0,
     },
     modal: {
       active: false,
@@ -30,6 +31,8 @@ const init = () => {
     reviews: document.querySelectorAll('.reviews_photo'),
     sertificats: document.querySelectorAll('.ed_sertificat'),
     disclamer: document.querySelector('.description'),
+    right_button: document.querySelector('.right_arrow'),
+    left_button: document.querySelector('.left_arrow'),
   };
   const watched = watch(state, elements, i18nextInstance);
 

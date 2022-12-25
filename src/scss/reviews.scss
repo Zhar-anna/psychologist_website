@@ -1,12 +1,15 @@
 .flex {
     display: flex;
 }
+.cp {
+    cursor: pointer;
+}
 .Reviews {
     justify-content: center;
 }
 .reviews_container {
     position: relative;
-    height: 400px;
+    height: 700px;
     width: 1000px;
     justify-content: center;
     align-items: center;
@@ -23,7 +26,6 @@
 
 .reviews_photo {
     flex-shrink: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +34,5 @@
 
 .left_arrow,
 .right_arrow {
-    cursor: pointer;
     margin: 50px;
 }
