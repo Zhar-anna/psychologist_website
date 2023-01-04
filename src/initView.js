@@ -33,8 +33,17 @@ export default (watchedState, elements, i18nextInstance) => {
   watsapp.style.height = 30 + 'px';
   telegram.style.height = 30 + 'px';
   disclamer.innerHTML = i18nextInstance.t('disclamer');
+  const main = document.querySelector('.main');
+  main.textContent = i18nextInstance.t('main.name');
+  const title = document.querySelector('.title');
+  title.textContent = i18nextInstance.t('main.profession');
   // дальнейший код записать в одну функцию с диспетчеризацией по ключу
   // где ключ - класс элемента перемотки
+  const capsKey = {
+    education: caps[0],
+    review: caps[1],
+    prices: caps[2],
+  };
   caps[0].addEventListener("click", (e) => {
     e.preventDefault();
     const education = document.querySelector('.education');
@@ -54,18 +63,14 @@ export default (watchedState, elements, i18nextInstance) => {
   
   sertificats.forEach((sertificat) => {
     sertificat.addEventListener('mouseover', (e) => {
-      // sertificat.removeEventListener('mouseover', (e));
-      e.preventDefault();
+      e.stopImmediatePropagation();
       watchedState.modal.viewedDiplomaId = arraySertisicats.indexOf(sertificat);
       watchedState.modal.active = true;
-      
-    });
-  });
-  sertificats.forEach((sertificat) => {
-    sertificat.addEventListener('mouseout', (e) => {
-      e.preventDefault();
-      watchedState.modal.viewedDiplomaId = null;
-      watchedState.modal.active = false;
+      sertificat.addEventListener('mouseout', (e) => {
+        e.stopImmediatePropagation();
+        watchedState.modal.viewedDiplomaId = null;
+        watchedState.modal.active = false;
+      });
     });
   });
 
