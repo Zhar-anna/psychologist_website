@@ -32,7 +32,7 @@ export default (watchedState, elements, i18nextInstance) => {
   });
   watsapp.style.height = 30 + 'px';
   telegram.style.height = 30 + 'px';
-  disclamer.innerHTML = i18nextInstance.t('disclamer');
+  disclamer.innerHTML = i18nextInstance.t('disclamer1');
   const main = document.querySelector('.main');
   main.textContent = i18nextInstance.t('main.name');
   const title = document.querySelector('.title');

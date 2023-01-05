@@ -1,6 +1,7 @@
 import i18next from 'i18next';
 import locales from './locales/ru.js';
 import watch from './view.js';
+import emerge from './emegre.js';
 import initView from './initView.js';
 import diploma0 from './images/Education/Диплом1.jpg';
 import diploma1 from './images/Education/Диплом2.jpg';
