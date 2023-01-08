@@ -52,6 +52,10 @@ module.exports = {
         type: 'asset/resource', 
       },
       {
+        test: /\.png/,
+        type: 'asset/resource', 
+      },
+      {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/inline',
       },

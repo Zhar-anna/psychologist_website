@@ -1,7 +1,6 @@
 import i18next from 'i18next';
 import locales from './locales/ru.js';
 import watch from './view.js';
-import emerge from './emegre.js';
 import initView from './initView.js';
 import diploma0 from './images/Education/Диплом1.jpg';
 import diploma1 from './images/Education/Диплом2.jpg';
@@ -42,6 +41,7 @@ const init = () => {
   const elements = {
     caps: document.querySelectorAll('.cp'),
     watsapp: document.querySelector('.watsapp'),
+    watsapp_href: document.querySelector('.watsapp_href'),
     telegram: document.querySelector('.telegram'),
     photo: document.querySelector('.photo'),
     reviews: document.querySelectorAll('.reviews_photo'),
@@ -54,6 +54,10 @@ const init = () => {
     modal_diploma: document.querySelector('.modal_diploma'),
     modal_years: document.querySelector('.modal_years'),
     modal_description: document.querySelector('.modal_description'),
+    youtube: document.querySelector('.youtube'),
+    vk: document.querySelector('.vk'),
+    youtube_imag: document.querySelector('.youtube_image'),
+    vk_imag: document.querySelector('.vk_image'),
   };
   const watched = watch(state, elements, i18nextInstance);
 
