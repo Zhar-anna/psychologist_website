@@ -47,6 +47,9 @@ const watch = (state, elements, i18nextInstance) =>
         overlay.classList.remove('active');
       }
     }
+    if (path === 'lang') {
+      
+    }
   });
 
 export default watch;
