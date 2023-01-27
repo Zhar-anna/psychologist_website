@@ -1,28 +1,21 @@
 .cp {
-    cursor: pointer;
+  cursor: pointer;
 }
 .flex {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .blogs {
-    height: 300px;
+  height: 300px;
 }
 .youtube_image,
 .vk_image {
-    height: 120px;
-    width: 100%;
-   z-index: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 0;
 }
 
 .vk,
 .youtube {
-    z-index: 3;
+  z-index: 3;
 }
-
-
-
-
-
-
-

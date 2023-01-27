@@ -1,31 +1,31 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 .cp {
-    cursor: pointer;
+  cursor: pointer;
 }
 .Reviews {
-    justify-content: center;
+  justify-content: center;
 }
 .reviews_container {
-    position: relative;
-    height: 500px;
-    width: 1000px;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 500px;
+  width: 1000px;
+  justify-content: center;
+  align-items: center;
 }
 .slider {
   justify-content: center;
 }
 .slider_list {
-    overflow: hidden;
+  overflow: hidden;
 }
 .slider img {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .reviews_photo {
-    flex-shrink: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,13 +35,13 @@
 
 .left_arrow,
 .right_arrow {
-    font-size: 30px;
-    border-radius: 50%;
-    margin: 50px;
-    padding: 10px 16px;
-    color: rgb(7, 92, 64);
-    border: 2px solid rgb(26, 125, 206);
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 30px;
+  border-radius: 50%;
+  margin: 50px;
+  padding: 10px 16px;
+  color: rgb(7, 92, 64);
+  border: 2px solid rgb(10, 54, 90);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

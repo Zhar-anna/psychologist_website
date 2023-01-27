@@ -6,6 +6,5 @@ import './scss/blogs.scss';
 import emerge from './emegre.js';
 import init from './init.js';
 
-
 init();
 // emerge();

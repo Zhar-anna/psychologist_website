@@ -22,8 +22,26 @@ import reviews8 from './images/Reviews/Отзыв8.jpg';
 const init = () => {
   const state = {
     lang: 'ru',
-    diploms: [{id: 0, title: 'diploma0', photo: diploma0}, {id: 1, title: 'diploma1', photo: diploma1}, {id: 2, title: 'diploma2', photo:diploma2}, {id: 3, title: 'diploma3', photo: diploma3}, {id: 4, title: 'diploma4', photo: diploma4}, {id: 5, title: 'diploma5', photo: diploma5}, {id: 6, title: 'diploma6', photo:diploma6}, {id: 7, title: 'diploma7', photo: diploma7}],
-    reviews: [{id: 0, photo: reviews1}, {id: 1, photo: reviews2}, {id: 2, photo: reviews3}, {id: 3, photo: reviews4}, {id: 4, photo: reviews5}, {id: 5, photo: reviews6}, {id: 6, photo: reviews7}, {id: 7, photo: reviews8}],
+    diploms: [
+      { id: 0, title: 'diploma0', photo: diploma0 },
+      { id: 1, title: 'diploma1', photo: diploma1 },
+      { id: 2, title: 'diploma2', photo: diploma2 },
+      { id: 3, title: 'diploma3', photo: diploma3 },
+      { id: 4, title: 'diploma4', photo: diploma4 },
+      { id: 5, title: 'diploma5', photo: diploma5 },
+      { id: 6, title: 'diploma6', photo: diploma6 },
+      { id: 7, title: 'diploma7', photo: diploma7 },
+    ],
+    reviews: [
+      { id: 0, photo: reviews1 },
+      { id: 1, photo: reviews2 },
+      { id: 2, photo: reviews3 },
+      { id: 3, photo: reviews4 },
+      { id: 4, photo: reviews5 },
+      { id: 5, photo: reviews6 },
+      { id: 6, photo: reviews7 },
+      { id: 7, photo: reviews8 },
+    ],
     uiState: {
       viewedReviewsId: 0,
     },
@@ -31,7 +49,7 @@ const init = () => {
       active: false,
       viewedDiplomaId: null,
     },
-  }
+  };
   const i18nextInstance = i18next.createInstance();
   i18nextInstance.init({
     lng: state.lang,

@@ -1,10 +1,13 @@
 .flex {
-    display: flex;
-  }
+  display: flex;
+}
 
 .ed_sertificat_container {
-    justify-content: space-evenly;
-    margin: 20px;
+  justify-content: space-around;
+  margin: 20px;
+
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .ed_sertificat {
