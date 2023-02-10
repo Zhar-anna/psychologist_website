@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import locales from './locales/ru.js';
+import locales from './locales/index.js';
 import watch from './view.js';
 import initView from './initView.js';
 import diploma0 from './images/Education/Диплом1.jpg';
@@ -19,7 +19,7 @@ import reviews6 from './images/Reviews/Отзыв6.jpg';
 import reviews7 from './images/Reviews/Отзыв7.jpg';
 import reviews8 from './images/Reviews/Отзыв8.jpg';
 
-const init = () => {
+const init = async () => {
   const state = {
     lang: 'ru',
     diploms: [
@@ -51,17 +51,19 @@ const init = () => {
     },
   };
   const i18nextInstance = i18next.createInstance();
-  i18nextInstance.init({
+  await i18nextInstance.init({
     lng: state.lang,
     debug: true,
     resources: locales,
   });
   const elements = {
-    caps: document.querySelectorAll('.cp'),
+    caps: document.querySelectorAll('.cap_item'),
     watsapp: document.querySelector('.watsapp'),
     watsapp_href: document.querySelector('.watsapp_href'),
     telegram: document.querySelector('.telegram'),
     photo: document.querySelector('.photo'),
+    section: document.querySelectorAll('.section_title'),
+    button: document.querySelector('.green-button'),
     reviews: document.querySelectorAll('.reviews_photo'),
     sertificats: document.querySelectorAll('.ed_sertificat'),
     disclamer: document.querySelector('.description'),
@@ -76,6 +78,10 @@ const init = () => {
     vk: document.querySelector('.vk'),
     youtube_imag: document.querySelector('.youtube_image'),
     vk_imag: document.querySelector('.vk_image'),
+    ru: document.querySelector('.langRU'),
+    eng: document.querySelector('.langENG'),
+    achievements: document.querySelectorAll('span'),
+    prices_item: document.querySelectorAll('.prices_item'),
   };
   const watched = watch(state, elements, i18nextInstance);
 

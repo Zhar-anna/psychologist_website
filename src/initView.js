@@ -5,7 +5,7 @@ import youtube_image from './images/youtube.png';
 import vk_image from './images/vk.png';
 
 export default (watchedState, elements, i18nextInstance) => {
-  // const { lang } = watchedState;
+  const { lang } = watchedState;
   const {
     caps,
     watsapp,
@@ -21,6 +21,8 @@ export default (watchedState, elements, i18nextInstance) => {
     vk,
     youtube_imag,
     vk_imag,
+    ru,
+    eng,
   } = elements;
   watsapp.src = watsapp_image;
   watsapp_href.href =
@@ -36,8 +38,6 @@ export default (watchedState, elements, i18nextInstance) => {
     sertificats[i].src = watchedState.diploms[i].photo;
     reviews[i].src = watchedState.reviews[i].photo;
   }
-  // sertificats[0].style.height = 253 + 'px';
-  // sertificats[0].style.width = 300 + 'px';
 
   let arraySertisicats = [];
   sertificats.forEach((sertificat) => {
@@ -46,42 +46,28 @@ export default (watchedState, elements, i18nextInstance) => {
     sertificat.style.height = 100 + '%';
   });
 
-  watsapp.style.height = 30 + 'px';
-  telegram.style.height = 30 + 'px';
-  disclamer.innerHTML = i18nextInstance.t('disclamer1');
-  const main = document.querySelector('.main');
-  main.textContent = i18nextInstance.t('main.name');
-  const title = document.querySelector('.title');
-  title.textContent = i18nextInstance.t('main.profession');
-  // дальнейший код записать в одну функцию с диспетчеризацией по ключу
-  // где ключ - класс элемента перемотки
   const capsKey = {
-    education: caps[0],
-    review: caps[1],
-    prices: caps[2],
-    blogs: caps[3],
+    '.about': caps[1],
+    '.education': caps[2],
+    '.Reviews': caps[3],
+    '.prices': caps[4],
+    '.blogs': caps[5],
   };
-  caps[0].addEventListener('click', (e) => {
-    e.preventDefault();
-    const education = document.querySelector('.education');
-    education.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  Object.entries(capsKey).map(([key, value]) => {
+    value.addEventListener('click', () => {
+      const scroll = document.querySelector(key);
+      scroll.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    })
+  })
+
+  eng.addEventListener('click', () => {
+    i18nextInstance.changeLanguage('en');
+    watchedState.lang = 'en';
   });
-  caps[1].addEventListener('click', (e) => {
-    e.preventDefault();
-    const reviews = document.querySelector('.Reviews');
-    reviews.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  ru.addEventListener('click', () => {
+    i18nextInstance.changeLanguage('ru');
+    watchedState.lang = 'ru';
   });
-  caps[2].addEventListener('click', (e) => {
-    e.preventDefault();
-    const prices = document.querySelector('.prices');
-    prices.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  caps[3].addEventListener('click', (e) => {
-    e.preventDefault();
-    const blog = document.querySelector('.blogs');
-    blog.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  //
 
   sertificats.forEach((sertificat) => {
     sertificat.addEventListener('mouseover', (e) => {

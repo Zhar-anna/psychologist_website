@@ -1,26 +1,70 @@
 import onChange from 'on-change';
 
-const watch = (state, elements, i18nextInstance) =>
-  onChange(state, (path, value) => {
-    const {
-      caps,
-      watsapp,
-      telegram,
-      photo,
-      reviews,
-      sertificats,
-      disclamer,
-      right_button,
-      left_button,
-      overlay,
-      modal,
-      modal_diploma,
-      modal_years,
-      modal_description,
-    } = elements;
+const watch = (state, elements, i18nextInstance) => {
+  const {
+    caps,
+    watsapp,
+    telegram,
+    photo,
+    section,
+    button,
+    reviews,
+    sertificats,
+    disclamer,
+    right_button,
+    left_button,
+    overlay,
+    modal,
+    modal_diploma,
+    modal_years,
+    modal_description,
+    ru,
+    eng,
+    achievements,
+    prices_item,
+  } = elements;
+  watsapp.style.height = 30 + 'px';
+  telegram.style.height = 30 + 'px';
+  disclamer.innerHTML = i18nextInstance.t('disclamer2');
+  const main = document.querySelector('.main');
+  main.textContent = i18nextInstance.t('main.name');
+  const title = document.querySelector('.title');
+  title.textContent = i18nextInstance.t('main.profession');
+  caps[0].textContent = i18nextInstance.t('hat.tel');
+  caps[1].textContent = i18nextInstance.t('hat.about');
+  caps[2].textContent = i18nextInstance.t('hat.education');
+  caps[3].textContent = i18nextInstance.t('hat.reviews');
+  caps[4].textContent = i18nextInstance.t('hat.services');
+  caps[5].textContent = i18nextInstance.t('hat.blogs');
+  button.textContent = i18nextInstance.t('button');
+  ru.textContent = i18nextInstance.t('lang.ru');
+  eng.textContent = i18nextInstance.t('lang.eng');
+  section[0].textContent = i18nextInstance.t('education.title');
+  section[1].textContent = i18nextInstance.t('reviews.title');
+  section[2].textContent = i18nextInstance.t('price.title');
+  section[3].textContent = i18nextInstance.t('blogs.title');
+  let achiArray = [];
+  achievements.forEach((achieve) => {
+    achiArray.push(achieve);
+    achieve.textContent = i18nextInstance.t(`achievements.${achiArray.indexOf(achieve)}`);
+  });
+  let priceArray = []
+  prices_item.forEach((item) => {
+    priceArray.push(item);
+    const title = item.querySelector('.price_title');
+    title.innerHTML = i18nextInstance.t(`price.block${priceArray.indexOf(item)}.price_title`);
+    const whole = item.querySelector('.price_whole');
+   whole.innerHTML = i18nextInstance.t(`price.block${priceArray.indexOf(item)}.price_whole`);
+    const count = item.querySelector('.price_count');
+    if (count === null) {
+      return;
+    }
+     count.innerHTML = i18nextInstance.t(`price.block${priceArray.indexOf(item)}.price_count`);
+
+  });
+
+  const watchedstate = onChange(state, (path, value) => {
     if (path === 'uiState.viewedReviewsId') {
-      // const activeReview = document.getElementById(`${value}`);
-      // activeReview.style.display = 'block';
       reviews.forEach((review) => {
         if (review.id != value) {
           review.style.display = 'none';
@@ -48,8 +92,10 @@ const watch = (state, elements, i18nextInstance) =>
       }
     }
     if (path === 'lang') {
-      
+      console.log(state)
+      watch(state, elements, i18nextInstance);
     }
   });
-
+  return watchedstate;
+}
 export default watch;
