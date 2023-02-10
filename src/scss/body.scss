@@ -77,13 +77,13 @@ body {
   font-size: 40px;
   line-height: 49px;
   justify-content: center;
+  align-items: center;
   margin: 50px;
   font-weight: bold;
 }
 .cap {
   margin: 40px;
   justify-content: space-around;
-  margin: 10px;
 }
 .cap_item {
   font-size: 20px;
@@ -140,14 +140,14 @@ body {
   height: 100%;
 }
  .achievements {
- margin-left: 20%;
+ margin-left: 14%;
   } 
 
  .markers {
   list-style: none; 
   background: url(../images/book.png) no-repeat;
   padding-left: 50px;
-  height: 50px;
+  /*  height: 50px; */
   margin-bottom: 20px;
 } 
 
