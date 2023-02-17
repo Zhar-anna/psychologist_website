@@ -1,6 +1,6 @@
 import photo_image from './images/Photo.jpg';
-import telegram_image from './images/Telegram.jpg';
-import watsapp_image from './images/Watsapp.jpg';
+import telegram_image from './images/Telegram.png';
+import watsapp_image from './images/Watsapp.png';
 import youtube_image from './images/youtube.png';
 import vk_image from './images/vk.png';
 

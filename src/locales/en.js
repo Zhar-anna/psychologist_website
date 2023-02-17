@@ -1,19 +1,18 @@
 export default {
-  // eng: {
     translation: {
       lang: {
         ru: 'RU',
         eng: 'ENG',
       },
       hat: {
-        tel: '+7 (977) 351-34-40',
         about: 'About me',
         education: 'Education',
         reviews: 'Rewievs',
         services: 'Services',
         blogs: 'Blogs',
+        tel: 'Contacts',
       },
-      button: 'booking a session',
+      button: 'Booking a session',
       achievements: {
         0: '5,5 ',
         1: 'years of basic education',
@@ -25,7 +24,7 @@ export default {
       disclamer1:
         'Что выгодно отличает меня как специалиста?<br><br>Две основные вещи:<br><br>- Психологию я выбрала ещё в школе и целенаправленно шла на психолога;<br>- Я работаю бережно и не ставлю своей целью непременно вывести клиента на слёзы или заставить измениться.<br><br>Со мной Вы сможете получить поддержку и принятие, если Вы мой клиент — я на Вашей стороне.<br> Особенно я специализируюсь на вопросах зависимых отношений, абьюза, любви, влюблённости.',
       disclamer2:
-        "Hello, my name is Hega, I'm a psychologist from Russia.<br>My main principles of work:<br>acceptance, alliance, empathy, sincere interest in the client`s personality;<br>counseling regardless of client`s religious of gender identy;<br>constant work quality improvement through academic and self-education in the field of fundamental and practical psychology.<br><br>I specialise in love relationship issues, co-dependence, abuse, parting and trauma.",
+        "Hello, my name is Helga, I'm a psychologist from Russia.<br>My main principles of work:<br>acceptance, alliance, empathy, sincere interest in the client`s personality;<br>counseling regardless of client`s religious of gender identy;<br>constant work quality improvement through academic and self-education in the field of fundamental and practical psychology.<br><br>I specialise in love relationship issues, co-dependence, abuse, parting and trauma.",
       main: {
         name: 'Mrs. Olga Kolesnik (Zharova)',
         profession: 'Psychologist (Moscow)',
@@ -95,7 +94,11 @@ export default {
       },
       blogs: {
         title: 'Blogs'
+      },
+      contacts: {
+        title: 'Contacts',
+        tel: '+7 (977) 351-34-40',
+        email: 'warda-mary@yandex.ru',
       }
     },
-  // },
 };

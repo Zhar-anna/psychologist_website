@@ -16,18 +16,14 @@ $sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
   }
 }
 body {
-  /* background: url(../images/backgroun.jpg);
-  background-size: 100%;
-  background-attachment: fixed;  */
   min-width: 390px;
   background-color: #062028;
   height: 2700px;
- /* width: 100%; */
- overflow-x: hidden;
+  overflow-x: hidden;
 }
 .green-button {
   border-radius: 35px;
-  background-color: #198E48;
+  background-color: #198e7b;
   height: 85px;
   width: 445px;
   align-items: center;
@@ -67,8 +63,9 @@ body {
 }
 .metric {
   font-size: 40px;
-  color: #198E48;
+  color: #198e7b;
   font-weight: bold;
+  margin-left: 20px;
 }
 .text {
   font-size: 35px;
@@ -82,10 +79,19 @@ body {
   font-weight: bold;
 }
 .cap {
-  margin: 40px;
+  flex-direction: row;
+  margin-bottom: 5%;
   justify-content: space-around;
 }
+.space_around {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cap_item {
+  align-self: center;
+  list-style-type: none;
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
@@ -111,7 +117,6 @@ body {
 .description {
   font-weight: 200;
   width: 910px;
-  /* height: 100%; */
   max-height: 700px;
   font-size: 24px;
   line-height: 30px;
@@ -131,7 +136,11 @@ body {
 }
 
 .watsapp {
-  position: relative;
+  height: 30px;
+  width: auto;
+  margin-left: 10%;
+}
+.telegram {
   margin-left: 10%;
 }
 
@@ -147,7 +156,6 @@ body {
   list-style: none; 
   background: url(../images/book.png) no-repeat;
   padding-left: 50px;
-  /*  height: 50px; */
   margin-bottom: 20px;
 } 
 
@@ -217,4 +225,10 @@ body {
 
 .modal_years {
   height: 10%;
+}
+
+.contacts_container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

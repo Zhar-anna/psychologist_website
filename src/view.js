@@ -22,6 +22,7 @@ const watch = (state, elements, i18nextInstance) => {
     eng,
     achievements,
     prices_item,
+    contacts,
   } = elements;
   watsapp.style.height = 30 + 'px';
   telegram.style.height = 30 + 'px';
@@ -30,12 +31,12 @@ const watch = (state, elements, i18nextInstance) => {
   main.textContent = i18nextInstance.t('main.name');
   const title = document.querySelector('.title');
   title.textContent = i18nextInstance.t('main.profession');
-  caps[0].textContent = i18nextInstance.t('hat.tel');
-  caps[1].textContent = i18nextInstance.t('hat.about');
-  caps[2].textContent = i18nextInstance.t('hat.education');
-  caps[3].textContent = i18nextInstance.t('hat.reviews');
-  caps[4].textContent = i18nextInstance.t('hat.services');
-  caps[5].textContent = i18nextInstance.t('hat.blogs');
+  caps[0].textContent = i18nextInstance.t('hat.about');
+  caps[1].textContent = i18nextInstance.t('hat.education');
+  caps[2].textContent = i18nextInstance.t('hat.reviews');
+  caps[3].textContent = i18nextInstance.t('hat.services');
+  caps[4].textContent = i18nextInstance.t('hat.blogs');
+  caps[5].textContent = i18nextInstance.t('hat.tel');
   button.textContent = i18nextInstance.t('button');
   ru.textContent = i18nextInstance.t('lang.ru');
   eng.textContent = i18nextInstance.t('lang.eng');
@@ -43,6 +44,7 @@ const watch = (state, elements, i18nextInstance) => {
   section[1].textContent = i18nextInstance.t('reviews.title');
   section[2].textContent = i18nextInstance.t('price.title');
   section[3].textContent = i18nextInstance.t('blogs.title');
+  section[4].textContent = i18nextInstance.t('contacts.title');
   let achiArray = [];
   achievements.forEach((achieve) => {
     achiArray.push(achieve);
@@ -62,7 +64,8 @@ const watch = (state, elements, i18nextInstance) => {
      count.innerHTML = i18nextInstance.t(`price.block${priceArray.indexOf(item)}.price_count`);
 
   });
-
+  contacts[0].textContent = i18nextInstance.t('contacts.tel');
+  contacts[1].textContent = i18nextInstance.t('contacts.email');
   const watchedstate = onChange(state, (path, value) => {
     if (path === 'uiState.viewedReviewsId') {
       reviews.forEach((review) => {

@@ -82,6 +82,7 @@ const init = async () => {
     eng: document.querySelector('.langENG'),
     achievements: document.querySelectorAll('span'),
     prices_item: document.querySelectorAll('.prices_item'),
+    contacts: document.querySelectorAll('.contact'),
   };
   const watched = watch(state, elements, i18nextInstance);
 

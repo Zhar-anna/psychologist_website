@@ -1,17 +1,16 @@
 export default {
-  // ru:{
     translation: {
       lang: {
         ru: 'RU',
         eng: 'ENG',
       },
       hat: {
-        tel: '+7 (977) 351-34-40',
         about: 'Обо мне',
         education: 'Образование',
         reviews: 'Отзывы',
         services: 'Услуги',
         blogs: 'Блоги',
+        tel: 'Контакты',
       },
       button: 'Записаться',
       achievements: {
@@ -31,7 +30,7 @@ export default {
         profession: 'Практикующий психолог',
       },
       education: {
-        title: 'Образование и повышение кваллификации',
+        title: 'Образование и повышение квалификации',
         diploma0: {
           years: '2016-2021',
           description:
@@ -95,7 +94,11 @@ export default {
       },
       blogs: {
         title: 'Блоги о психологии'
+      },
+      contacts: {
+        title: 'Контакты',
+        tel: '+7 (977) 351-34-40',
+        email: 'warda-mary@yandex.ru',
       }
     },
-  // },
 };
