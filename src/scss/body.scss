@@ -96,7 +96,30 @@ body {
   line-height: 24px;
   color: #ffffff;
 }
-
+.star{
+  height: 60px;
+  width: auto;
+  position: absolute;
+  left: 550px;
+  top: 120px;
+}
+.action_text{
+  color: #fff6f6;
+  font-size: 20px
+}
+.head_actions {
+  color:chartreuse;
+  font-size: 40px;
+  margin-left: 250px;
+  border:1px solid #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer
+}
+.events_img{
+  height: auto;
+  width: 400px;
+}
 .main {
   font-size: 64px;
   line-height: 78px;

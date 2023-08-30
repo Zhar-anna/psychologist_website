@@ -3,6 +3,8 @@ import telegram_image from './images/Telegram.png';
 import watsapp_image from './images/Watsapp.png';
 import youtube_image from './images/youtube.png';
 import vk_image from './images/vk.png';
+import star_image from './images/star.png';
+import events_img from './images/events_img.jpg'
 
 export default (watchedState, elements, i18nextInstance) => {
   const { lang } = watchedState;
@@ -23,6 +25,8 @@ export default (watchedState, elements, i18nextInstance) => {
     vk_imag,
     ru,
     eng,
+    star,
+    events,
   } = elements;
   watsapp.src = watsapp_image;
   watsapp_href.href =
@@ -33,6 +37,8 @@ export default (watchedState, elements, i18nextInstance) => {
   youtube.href = 'https://www.youtube.com/@K_ole';
   vk_imag.src = vk_image;
   youtube_imag.src = youtube_image;
+  star.src = star_image;
+  events.src = events_img;
 
   for (let i = 0; i <= watchedState.diploms.length - 1; i += 1) {
     sertificats[i].src = watchedState.diploms[i].photo;
@@ -52,6 +58,7 @@ export default (watchedState, elements, i18nextInstance) => {
     '.Reviews': caps[3],
     '.prices': caps[4],
     '.blogs': caps[5],
+    '.events': caps[6],
   };
   Object.entries(capsKey).map(([key, value]) => {
     value.addEventListener('click', () => {

@@ -19,6 +19,7 @@ import reviews6 from './images/Reviews/Отзыв6.jpg';
 import reviews7 from './images/Reviews/Отзыв7.jpg';
 import reviews8 from './images/Reviews/Отзыв8.jpg';
 
+
 const init = async () => {
   const state = {
     lang: 'ru',
@@ -83,6 +84,8 @@ const init = async () => {
     achievements: document.querySelectorAll('span'),
     prices_item: document.querySelectorAll('.prices_item'),
     contacts: document.querySelectorAll('.contact'),
+    star: document.querySelector('.star'),
+    events: document.querySelector('.events_img'),
   };
   const watched = watch(state, elements, i18nextInstance);
 

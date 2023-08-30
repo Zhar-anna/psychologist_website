@@ -44,7 +44,8 @@ const watch = (state, elements, i18nextInstance) => {
   section[1].textContent = i18nextInstance.t('reviews.title');
   section[2].textContent = i18nextInstance.t('price.title');
   section[3].textContent = i18nextInstance.t('blogs.title');
-  section[4].textContent = i18nextInstance.t('contacts.title');
+  section[4].textContent = i18nextInstance.t('events.title');
+  section[5].textContent = i18nextInstance.t('contacts.title');
   let achiArray = [];
   achievements.forEach((achieve) => {
     achiArray.push(achieve);
