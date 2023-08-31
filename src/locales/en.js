@@ -89,7 +89,7 @@ export default {
         },
         block2: {
           price_title: 'New format',
-          price_whole: '<br><br>Chat -<br>40 $ USA/ 1 h 30 min<br>(fix time)',
+          price_whole: '<br><br>Chat -<br>20 $ USA/ 1 h 30 min<br>(fix time)',
         },
       },
       blogs: {
