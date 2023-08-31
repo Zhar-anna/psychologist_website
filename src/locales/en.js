@@ -80,12 +80,12 @@ export default {
         block0: {
           price_title: 'Individual<br>session',
           price_count: '30 $ USA / 60 min',
-          price_whole: 'package of five individual sessions - 200 $ USA',
+          price_whole: '',
         },
         block1: {
           price_title: 'Family<br>session',
           price_count: '35 $ USA / 90 min',
-          price_whole: 'package of five family sessions - 300 $ USA',
+          price_whole: '',
         },
         block2: {
           price_title: 'New format',
